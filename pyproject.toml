@@ -1,0 +1,16 @@
+[project]
+name = "free-llm-tool"
+version = "0.1.0"
+description = "MCP tool that hands bulky, non-confidential work to free-tier LLM providers"
+requires-python = ">=3.10"
+dependencies = ["openai", "mcp", "truststore"]
+
+[project.scripts]
+free-llm = "server:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+py-modules = ["server"]
